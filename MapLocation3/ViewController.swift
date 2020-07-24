@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
           locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        navigationController?.setNavigationBarHidden(true, animated: true)
         // Do any additional setup after loading the view.
     }
 }
