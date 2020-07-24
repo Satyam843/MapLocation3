@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapLocation3" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,19 +19,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5p2-jt-ldW">
-                                <rect key="frame" x="10" y="98" width="394" height="754"/>
+                                <rect key="frame" x="10" y="64" width="394" height="788"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQb-iZ-k28">
+                                <rect key="frame" x="5" y="20" width="404" height="39"/>
+                                <items>
+                                    <navigationItem title="Map" id="odN-fa-GqU"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5p2-jt-ldW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Grc-GW-rCA"/>
+                            <constraint firstItem="5p2-jt-ldW" firstAttribute="top" secondItem="EQb-iZ-k28" secondAttribute="bottom" constant="5" id="3vE-2d-tx3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5p2-jt-ldW" secondAttribute="bottom" constant="10" id="KK1-Ml-n9l"/>
                             <constraint firstItem="5p2-jt-ldW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="M12-xx-bUU"/>
+                            <constraint firstItem="EQb-iZ-k28" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="ONv-NH-osN"/>
+                            <constraint firstItem="5p2-jt-ldW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XWq-p7-I8K"/>
+                            <constraint firstAttribute="trailing" secondItem="EQb-iZ-k28" secondAttribute="trailing" constant="5" id="jL8-ZP-1GJ"/>
+                            <constraint firstItem="EQb-iZ-k28" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="jUK-ey-sMw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5p2-jt-ldW" secondAttribute="trailing" constant="10" id="rjL-3r-xeH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="gUb-XO-ErP"/>
                     <connections>
                         <outlet property="userMapView" destination="5p2-jt-ldW" id="Md3-qd-A9l"/>
                     </connections>
@@ -39,24 +48,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1857.9710144927537" y="18.75"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="afO-ke-zza">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cio-5J-keN" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N3y-5i-cx2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tgq-lG-kY8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nzm-N9-xeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="947.82608695652186" y="18.75"/>
         </scene>
     </scenes>
 </document>
